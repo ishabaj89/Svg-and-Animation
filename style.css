@@ -1,0 +1,427 @@
+/* -------------------- */
+/* Basic Reset */
+/* -------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff0f7;
+    color: #5b3150;
+}
+
+
+/* -------------------- */
+/* Main Page */
+/* -------------------- */
+
+.birthday-page {
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(
+        135deg,
+        #fff5fa,
+        #ffe5f1,
+        #f8e9ff
+    );
+}
+
+
+/* -------------------- */
+/* Header */
+/* -------------------- */
+
+.header {
+    width: 100%;
+    padding: 20px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+/* Star SVG */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.star-logo {
+    transition: transform 0.3s ease;
+}
+
+.star-logo:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    gap: 35px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #76245d;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #ed3f91;
+}
+
+
+/* Celebrate Text */
+
+.celebrate {
+    font-family: cursive;
+    font-size: 24px;
+    color: #d52c7c;
+}
+
+
+/* -------------------- */
+/* Birthday Section */
+/* -------------------- */
+
+.birthday-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+
+/* -------------------- */
+/* Photo Section */
+/* -------------------- */
+
+.photo-section {
+    text-align: center;
+}
+
+
+/* Photo Frame */
+
+.photo-frame {
+    width: 390px;
+    height: 390px;
+
+    margin: auto;
+    padding: 10px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #e9a72d,
+        #ffd86b,
+        #f28ab8
+    );
+
+    box-shadow: 0 10px 35px rgba(180, 70, 130, 0.25);
+
+    overflow: hidden;
+}
+
+
+/* Birthday Photo */
+
+.birthday-photo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    animation: photoZoom 4s ease-in-out infinite;
+}
+
+
+/* Pause Animation When Cursor Is On Photo */
+
+.birthday-photo:hover {
+    animation-play-state: paused;
+}
+
+
+/* -------------------- */
+/* Photo Zoom Animation */
+/* -------------------- */
+
+@keyframes photoZoom {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* -------------------- */
+/* Name Banner */
+/* -------------------- */
+
+.name-banner {
+    margin: -5px auto 0;
+
+    width: 330px;
+
+    padding: 15px 25px;
+
+    background: #f7a6c8;
+
+    border-radius: 0 0 50% 50%;
+
+    box-shadow: 0 5px 15px rgba(180, 70, 130, 0.15);
+}
+
+.name-banner p {
+    font-family: cursive;
+    font-size: 25px;
+    color: #8c1758;
+}
+
+
+/* -------------------- */
+/* Invitation */
+/* -------------------- */
+
+.invitation {
+    text-align: center;
+}
+
+
+/* Small Heading */
+
+.small-heading {
+    letter-spacing: 4px;
+    font-size: 18px;
+    color: #754367;
+    margin-bottom: 10px;
+}
+
+
+/* Aadvika */
+
+.invitation h1 {
+    font-family: cursive;
+    font-size: 75px;
+    color: #d52c7c;
+    line-height: 1;
+}
+
+
+/* Birthday Title */
+
+.birthday-title {
+    font-family: cursive;
+    font-size: 52px;
+    margin-top: 10px;
+    color: #b94a9b;
+}
+
+.birthday-title span {
+    color: #ed3f91;
+}
+
+
+/* Celebration */
+
+.celebration {
+    margin-top: 5px;
+    font-size: 20px;
+    letter-spacing: 6px;
+    color: #4d3051;
+}
+
+
+/* Message */
+
+.message {
+    max-width: 450px;
+    margin: 25px auto;
+
+    font-family: cursive;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+/* -------------------- */
+/* Event Details */
+/* -------------------- */
+
+.event-details {
+    max-width: 450px;
+    margin: 25px auto;
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(150, 70, 120, 0.12);
+}
+
+
+.detail {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    text-align: left;
+
+    padding: 10px 5px;
+}
+
+
+.icon {
+    font-size: 25px;
+}
+
+
+.detail p {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+
+/* -------------------- */
+/* RSVP */
+/* -------------------- */
+
+.rsvp-section {
+    margin-top: 25px;
+}
+
+
+.rsvp-button {
+    border: none;
+
+    padding: 17px 55px;
+
+    border-radius: 40px;
+
+    background: linear-gradient(
+        90deg,
+        #ed3f91,
+        #f05ca8
+    );
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(220, 50, 130, 0.3);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.rsvp-button:hover {
+    transform: scale(1.08);
+
+    box-shadow: 0 12px 30px rgba(220, 50, 130, 0.4);
+}
+
+
+/* Family Name */
+
+.family-name {
+    margin-top: 20px;
+
+    font-family: cursive;
+    font-size: 34px;
+
+    color: #a92870;
+}
+
+
+/* -------------------- */
+/* Bottom Section */
+/* -------------------- */
+
+.bottom-section {
+    max-width: 1000px;
+
+    margin: 30px auto 0;
+    padding: 25px;
+
+    display: flex;
+    justify-content: space-around;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(200, 100, 150, 0.2);
+}
+
+
+.party-item {
+    font-size: 30px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.party-item:hover {
+    transform: translateY(-8px);
+}
+
+
+.party-item p {
+    margin-top: 8px;
+
+    font-size: 16px;
+    color: #8c356c;
+}
+
+
+/* -------------------- */
+/* Footer */
+/* -------------------- */
+
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    font-family: cursive;
+    font-size: 22px;
+
+    color: #d52c7c;
+}
+
+
